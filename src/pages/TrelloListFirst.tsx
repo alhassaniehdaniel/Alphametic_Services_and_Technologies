@@ -98,7 +98,11 @@ const TrelloListC = () => {
   };
   return (
     <div>
-      <h2>Trello Drag n Drop</h2>
+      <h2>Trello Drag n Drop First Version</h2>
+      <p>
+        Here I used React Beautiful Drag and Drop library to drag and drop
+        tickets belonging to the same column
+      </p>
       <div className="maincontainer">
         <DragDropContext onDragEnd={onDragEnd1}>
           <Droppable droppableId="todo1">
@@ -171,7 +175,6 @@ const TrelloListC = () => {
           </Droppable>
         </DragDropContext>
       </div>
-
       {/* Commented for testing, code is working 
        <div style={styles.maincontainer}>
        <div style={styles.container}>

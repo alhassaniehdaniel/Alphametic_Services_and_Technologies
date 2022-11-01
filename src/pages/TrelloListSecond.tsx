@@ -59,54 +59,62 @@ const TrelloList2 = () => {
     });
   };
   return (
-    <div className="Trello-app">
-      <DragDropContext onDragEnd={handleDragEnd}>
-        {_.map(list, (data, key: any) => {
-          return (
-            <>
-              <div key={key} className={"column"}>
-                <h3>{data.title}</h3>
-                <Droppable droppableId={key}>
-                  {(provided) => {
-                    return (
-                      <div
-                        ref={provided.innerRef}
-                        {...provided.droppableProps}
-                        className={"droppable-col"}
-                      >
-                        {data.items.map((el: any, index: any) => {
-                          return (
-                            <Draggable
-                              key={el.id}
-                              index={index}
-                              draggableId={el.id}
-                            >
-                              {(provided) => {
-                                return (
-                                  <div
-                                    className={"item"}
-                                    ref={provided.innerRef}
-                                    {...provided.draggableProps}
-                                    {...provided.dragHandleProps}
-                                  >
-                                    {el.name}
-                                  </div>
-                                );
-                              }}
-                            </Draggable>
-                          );
-                        })}
-                        {provided.placeholder}
-                      </div>
-                    );
-                  }}
-                </Droppable>
-              </div>
-            </>
-          );
-        })}
-      </DragDropContext>
-    </div>
+    <>
+      <h2>Trello Drag n Drop Second Version</h2>
+      <p>
+        Here I used React Beautiful Drag and Drop library to drag and drop tickets
+        belonging to the different columns
+      </p>
+      <div className="Trello-app">
+        <br />
+        <DragDropContext onDragEnd={handleDragEnd}>
+          {_.map(list, (data, key: any) => {
+            return (
+              <>
+                <div key={key} className={"column"}>
+                  <h3>{data.title}</h3>
+                  <Droppable droppableId={key}>
+                    {(provided) => {
+                      return (
+                        <div
+                          ref={provided.innerRef}
+                          {...provided.droppableProps}
+                          className={"droppable-col"}
+                        >
+                          {data.items.map((el: any, index: any) => {
+                            return (
+                              <Draggable
+                                key={el.id}
+                                index={index}
+                                draggableId={el.id}
+                              >
+                                {(provided) => {
+                                  return (
+                                    <div
+                                      className={"item"}
+                                      ref={provided.innerRef}
+                                      {...provided.draggableProps}
+                                      {...provided.dragHandleProps}
+                                    >
+                                      {el.name}
+                                    </div>
+                                  );
+                                }}
+                              </Draggable>
+                            );
+                          })}
+                          {provided.placeholder}
+                        </div>
+                      );
+                    }}
+                  </Droppable>
+                </div>
+              </>
+            );
+          })}
+        </DragDropContext>
+      </div>
+    </>
   );
 };
 
