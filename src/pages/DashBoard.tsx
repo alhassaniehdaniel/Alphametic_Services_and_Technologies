@@ -56,6 +56,7 @@ const DashBoard = () => {
             content_details={box.content_details}
           />
         ))}
+        {"random data"}
       </div>
     </div>
   );
