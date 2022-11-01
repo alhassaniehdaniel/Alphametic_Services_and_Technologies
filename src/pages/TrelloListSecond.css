@@ -1,0 +1,27 @@
+.Trello-app {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.Trello-app .column {
+  width: 30%;
+}
+
+.droppable-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: gray;
+  padding: 10px 10px 0 10px ;
+  border-radius: 7px;
+}
+
+.item {
+  margin-bottom: 10px;
+  background-color: gray;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 7px;
+}

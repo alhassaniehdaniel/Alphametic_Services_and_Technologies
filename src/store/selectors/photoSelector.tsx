@@ -1,0 +1,1 @@
+export const getAllPhotosSelector = (state: any) => state.photoReducer;

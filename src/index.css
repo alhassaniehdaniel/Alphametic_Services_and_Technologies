@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 16px;
+  --navbar-height: 50px;
+  --navbar-font-size: 24px;
+  --transition-time: 200ms;
+  --bg-primary: #e1e7ff;
+  --bg-secondary: #16c79a;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* //////////////////////  NavBar CSS ////////////////////// */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 2px 2px 10px #151d28;
+  background-color: white;
+  width: 100vw;
+  height: 50px;
+  top: 0;
+  z-index: 1;
+  position: fixed;
+}
+.navbar .nav-logo {
+  padding-right: 6.5rem;
+}
+
+.navbar .nav-logo a {
+  text-decoration: none;
+}
+.navbar ul {
+  /* margin: 0; */
+  /* padding: 0; */
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.Search-Input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 20px;
+  width: 250px;
+}
+
+.Search-Input input {
+  height: 30px;
+  width: 100%;
+}
+.Search-Icon {
+  position: absolute;
+  right: 7px;
+}
+.div-tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.focus-tooltip {
+  position: absolute;
+}
+.tooltip-blue {
+  position: relative;
+  color: white;
+  /* color: black; */
+  text-align: center;
+  font-size: 11px;
+  padding: 3px 3px;
+  z-index: 0;
+  background: rgb(80, 136, 214);
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  margin-top: -15px;
+  left: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+.tooltip-green {
+  position: relative;
+  color: white;
+  /* color: black; */
+  text-align: center;
+  font-size: 11px;
+  padding: 3px 3px;
+  z-index: 0;
+  background: rgb(50, 188, 26);
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  margin-top: -15px;
+  left: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+.Notification-Bell {
+  height: 23px;
+  width: 23px;
+}
+
+.Chat-Messages {
+  height: 23px;
+  width: 23px;
+}
+.main-img-container {
+  margin-right: 5px !important;
+}
+.img-container {
+  background-color: #16c79a;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+.profile-container {
+  margin-left: 5px !important;
+}
+.img-profile {
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+select {
+  border: none;
+  /* margin-top:-15px !important; */
+}
+
+select:focus {
+  outline: none;
+}
+
+/* //////////////////////  SideBar CSS ////////////////////// */
+
+.sidebar {
+  /* Width should match margin-left of main element */
+  width: 18rem;
+  height: 100vh;
+  top: 3.1rem;
+  /* Sidebar is scrolled away like this, use sticky ??? */
+  /* temp solution */
+  position: fixed;
+  z-index: 0;
+  background-color: white;
+  transition: width var(--transition-time) ease;
+  box-shadow: 2px 2px 10px #151d28;
+}
+.min-sidebar {
+  width: 9rem;
+}
+
+.sidebar ul {
+  padding: 0;
+}
+
+.sidebar .li-space {
+  display: flex;
+  margin: 20px;
+  padding: 7px 20px;
+  background-color: var(--bg-primary);
+  color: rgb(77, 77, 162);
+  border-radius: 3px;
+}
+
+.sidebar li {
+  list-style: none;
+}
+
+.sidebar li a {
+  text-decoration: none;
+}
+
+/* //////////////////////  Dashboard CSS ////////////////////// */
+/* //////////////////////  Main Content CSS ////////////////////// */
+.main-content {
+  margin-top: 5.7rem;
+  margin-left: 20rem;
+  padding-bottom: 1rem;
+  transition: margin-left var(--transition-time) ease;
+  z-index: -2;
+  /* background-color: white; */
+}
+.min-main-content {
+  margin-left: 11rem;
+}
+
+.route {
+  padding: 0;
+  margin-bottom: 0.5rem;
+  color: rgb(77, 77, 162);
+}
+
+.path {
+  padding: 0;
+  margin-top: 0.5rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* //////////////////////  Main Content CSS ////////////////////// */
+.main-content {
+  z-index: -1;
+}
+
+/* //////////////////////  Box CSS ////////////////////// */
+.box-display {
+  display: flex;
+}
+.box-preview {
+  padding: 0 10px 10px 10px;
+  width: 250px;
+  height: 130px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.user-preview {
+  padding: 0 10px 10px 10px;
+  width: 250px;
+  /* height: 70px; */
+  border-radius: 5px;
+  background-color: white;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.photo-preview {
+  /* padding: 0 10px 10px 10px;
+  width: 250px; */
+  /* height: 70px; */
+  /* border-radius: 5px; */
+  margin: 10px;
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  position: relative;
+  margin-left: 10px;
+}
+.box-title {
+  font-size: 0.75rem;
+  margin: 10px 2px 10px 10px;
+}
+.box-date {
+  margin: 10px 10px 10px 2px;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.Three-Dots {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  opacity: 50%;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  background-color: var(--bg-primary);
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+.icon-svg {
+  height: 30px;
+  width: 30px;
+}
+
+.title-content {
+  display: flex;
+  margin-top: 10px;
+}
+
+.content {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+.inner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content_percentage {
+  text-align: center;
+  margin: 5px;
+}
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
+
+.content_details {
+  text-align: center;
+  margin: 5px;
+  opacity: 75%;
+}
+/*/////////////////////////////////////////////User CSS//////////////////////////////// */
+
+.users-list-container {
+  margin-top: 5rem;
+  /* margin-left: 18rem; */
+  margin-right: 2rem;
+  /* background-color: red; */
+  flex: 4;
+  padding: 10px;
+}
+
+.users-list-top-section {
+  display: flex;
+}
+
+.user-item {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/*/////////////////////////////////////////////Photo CSS//////////////////////////////// */
+.photos-list-container {
+  margin-top: 5rem;
+  /* margin-left: 18rem; */
+  margin-right: 2rem;
+  /* background-color: red; */
+  flex: 4;
+  padding: 10px;
+}
+
+.img-size {
+  display: block !important;
+  visibility: visible !important;
+  height: 100px !important;
+  min-height: 100px !important;
+  width: 100px !important;
+}
+
+/* .MuiCardMedia-img {
+  display: block !important;
+  visibility: visible !important;
+  height: 100px !important;
+  min-height: 100px !important;
+  width: 100px !important;
+} */

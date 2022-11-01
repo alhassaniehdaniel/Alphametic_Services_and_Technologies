@@ -1,0 +1,7 @@
+.flex {
+  display: flex;
+}
+.captured-photo {
+  margin: auto 15px;
+  margin-top: 6px;
+}
