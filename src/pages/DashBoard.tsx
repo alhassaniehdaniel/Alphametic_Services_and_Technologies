@@ -43,6 +43,7 @@ const DashBoard = () => {
       {/* Dynamically passing data */}
       <h2 className="route">{title}</h2>
       <h5 className="path">{path}</h5>
+      <p>Here I reused the component box and passed props to it</p>
       <div className="box-display">
         {/* mapping through the array to create the boxes and passing the props */}
         {boxes.map((box) => (

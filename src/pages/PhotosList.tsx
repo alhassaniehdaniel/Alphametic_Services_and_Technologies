@@ -57,6 +57,10 @@ function PhotosList() {
           <>
             {/* list of users */}
             <h2>List of Photos</h2>
+            <p>
+              Here I used Axios to call api and get and show photos with title
+              from a link
+            </p>
             {photosList &&
               photosList.slice(0, 5).map((photo: UserType) => (
                 <div className="photo-preview" key={photo.id}>

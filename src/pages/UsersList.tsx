@@ -61,7 +61,10 @@ function UsersList() {
         <div className="users-list-top-section">
           <div>
             <h2>UsersList</h2>
-
+            <p>
+              Here I used Axios to call api and get and show list of users from
+              a link
+            </p>
             <h3>the state: {username}</h3>
             <input type="text" value={username} onChange={handleInputChange} />
           </div>

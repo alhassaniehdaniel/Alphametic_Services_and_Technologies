@@ -31,6 +31,9 @@ const Capture = () => {
   return (
     <>
       <h1>Webcam Capture</h1>
+      <p>
+        Here I used React Webcam to view the camera and included a function to capture your picture, and reseting it.
+      </p>
       <div className="flex">
         {/* To view webcam we simply use it as a component */}
         <Webcam
