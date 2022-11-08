@@ -62,8 +62,8 @@ const TrelloList2 = () => {
     <>
       <h2>Trello Drag n Drop Second Version</h2>
       <p>
-        Here I used React Beautiful Drag and Drop library to drag and drop tickets
-        belonging to the different columns
+        Here I used React Beautiful Drag and Drop library to drag and drop
+        tickets belonging to the different columns
       </p>
       <div className="Trello-app">
         <br />
@@ -72,7 +72,9 @@ const TrelloList2 = () => {
             return (
               <>
                 <div key={key} className={"column"}>
-                  <h3>{data.title}</h3>
+                  <div className="flex-around">
+                    <input className="input-bg" value={data.title} />
+                  </div>
                   <Droppable droppableId={key}>
                     {(provided) => {
                       return (
