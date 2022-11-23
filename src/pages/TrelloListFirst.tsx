@@ -72,7 +72,7 @@ const getItemStyle = (isDragging: boolean, draggableStyle: any) => ({
 
 const TrelloListC = () => {
   const [todo1, setTodo1] = useState(listContents1);
-  const [todo2, setTodo2] = useState(listContents1);
+  const [todo2, setTodo2] = useState(listContents2);
 
   const onDragEnd1 = (result: DropResult) => {
     const { source, destination } = result;

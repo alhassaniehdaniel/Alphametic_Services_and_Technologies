@@ -1,0 +1,15 @@
+#bg {
+  width: 100% !important;
+  height: 100% !important;
+}
+#overlay button {
+  background: transparent;
+  border: 0;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: black;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+}

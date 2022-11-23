@@ -60,7 +60,7 @@ function UsersList() {
       <div className="users-list-container">
         <div className="users-list-top-section">
           <div>
-            <h2>UsersList</h2>
+            <h2>Users List</h2>
             <p>
               Here I used Axios to call api and get and show list of users from
               a link

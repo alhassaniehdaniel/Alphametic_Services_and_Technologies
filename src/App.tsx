@@ -13,10 +13,14 @@ import PhotosList from "./pages/PhotosList";
 import TrelloListC from "./pages/TrelloListFirst";
 import TrelloList2 from "./pages/TrelloListSecond";
 import Webcam from "./pages/Webcam";
+import VRImplementationObject from "./pages/VRImplementationObject";
+import VRImplementationText from "./pages/VRImplementationText";
+import VRImplementationEquiImg from "./pages/VRImplementationEquiImg";
+import VRImplementationVideo from "./pages/VRImplementationVideo";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Router>
         <div className="App">
           <NavBar />
@@ -36,11 +40,31 @@ function App() {
               <Route path="/TrelloList2" element={<TrelloList2 />} />
 
               <Route path="/Webcam" element={<Webcam />} />
+
+              <Route
+                path="//VirtualRealityCubeMapImg/Object-Rotation-Helpers"
+                element={<VRImplementationObject />}
+              />
+
+              <Route
+                path="/VirtualRealityCubeMapImg/Plane-Text-Lights-Shadows-Model"
+                element={<VRImplementationText />}
+              />
+
+              <Route
+                path="/VirtualRealityEquirectangularImg-W-Text"
+                element={<VRImplementationEquiImg />}
+              />
+
+              <Route
+                path="/VirtualRealityVideo"
+                element={<VRImplementationVideo />}
+              />
             </Routes>
           </div>
         </div>
       </Router>
-    </div>
+    </>
   );
 }
 
