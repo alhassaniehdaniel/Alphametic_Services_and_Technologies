@@ -202,6 +202,7 @@ select:focus {
 .main-content {
   margin-top: 5.7rem;
   margin-left: 20rem;
+  margin-right: 2rem;
   padding-bottom: 1rem;
   transition: margin-left var(--transition-time) ease;
   z-index: -2;

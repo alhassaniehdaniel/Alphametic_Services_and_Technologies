@@ -56,7 +56,7 @@ function PhotosList() {
         ) : (
           <>
             {/* list of users */}
-            <h2>List of Photos</h2>
+            <h2>Photos List</h2>
             <p>
               Here I used Axios to call api and get and show photos with title
               from a link

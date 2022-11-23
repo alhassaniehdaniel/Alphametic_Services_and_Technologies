@@ -14,7 +14,6 @@ const item2 = {
   id: v4(),
   name: "Finish another task",
 };
-console.log(item);
 const TrelloList2 = () => {
   const [list, setlist] = useState<any>({
     "In-progress": {
